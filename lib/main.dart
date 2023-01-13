@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_getx/pages/named/first.dart';
-import 'package:flutter_getx/pages/named/second.dart';
-import 'package:flutter_getx/pages/next.dart';
-import 'package:flutter_getx/pages/normal/first.dart';
-import 'package:flutter_getx/pages/user.dart';
+import 'package:flutter_getx/src/pages/named/first.dart';
+import 'package:flutter_getx/src/pages/named/second.dart';
+import 'package:flutter_getx/src/pages/next.dart';
+import 'package:flutter_getx/src/pages/normal/first.dart';
+import 'package:flutter_getx/src/pages/simple_state_manage.dart';
+import 'package:flutter_getx/src/pages/user.dart';
 import 'package:get/get.dart';
 
 void main() {
@@ -83,6 +84,13 @@ class MyPage extends StatelessWidget {
                 Get.toNamed('/user/1234?name=Henry&age=22');
               },
               child: Text('동적 URL'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                // Navigator.of(context).pushNamed('/first');
+                Get.to(SimpleStateManagePage());
+              },
+              child: Text('단순상태관리'),
             ),
           ],
         ),
