@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_getx/src/binding/binding.dart';
+import 'package:flutter_getx/src/pages/binding.dart';
 import 'package:flutter_getx/src/pages/dependencys/dependency_manage.dart';
 import 'package:flutter_getx/src/pages/named/first.dart';
 import 'package:flutter_getx/src/pages/named/second.dart';
@@ -39,6 +41,11 @@ class MyApp extends StatelessWidget {
         GetPage(name: "/second", page: () => SecondNamedPage()),
         GetPage(name: "/next", page: () => NextPage()),
         GetPage(name: "/user/:uid", page: () => UserPage()),
+        GetPage(
+          name: "/binding",
+          page: () => BindingPage(),
+          binding: Binding(),
+        ),
       ],
     );
   }
@@ -107,6 +114,13 @@ class MyPage extends StatelessWidget {
                 Get.to(DependencyManagePage());
               },
               child: Text('의존성 관리'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                // Navigator.of(context).pushNamed('/first');
+                Get.toNamed('/binding');
+              },
+              child: Text('바인딩'),
             ),
           ],
         ),
