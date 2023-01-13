@@ -21,7 +21,7 @@ class BindingPage extends GetView<CountControllerWithGetX> {
             ),
             ElevatedButton(
               onPressed: () {
-                controller.increase('first');
+                CountControllerWithGetX.to.increase('first');
               },
               child: Text('increase'),
             ),
