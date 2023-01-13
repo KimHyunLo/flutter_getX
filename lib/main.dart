@@ -3,6 +3,7 @@ import 'package:flutter_getx/src/pages/named/first.dart';
 import 'package:flutter_getx/src/pages/named/second.dart';
 import 'package:flutter_getx/src/pages/next.dart';
 import 'package:flutter_getx/src/pages/normal/first.dart';
+import 'package:flutter_getx/src/pages/reactive_state_manage.dart';
 import 'package:flutter_getx/src/pages/simple_state_manage.dart';
 import 'package:flutter_getx/src/pages/user.dart';
 import 'package:get/get.dart';
@@ -90,7 +91,14 @@ class MyPage extends StatelessWidget {
                 // Navigator.of(context).pushNamed('/first');
                 Get.to(SimpleStateManagePage());
               },
-              child: Text('단순상태관리'),
+              child: Text('단순 상태 관리'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                // Navigator.of(context).pushNamed('/first');
+                Get.to(ReactiveStateManagePage());
+              },
+              child: Text('반응형 상태 관리'),
             ),
           ],
         ),
