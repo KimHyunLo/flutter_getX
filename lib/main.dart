@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_getx/src/pages/dependencys/dependency_manage.dart';
 import 'package:flutter_getx/src/pages/named/first.dart';
 import 'package:flutter_getx/src/pages/named/second.dart';
 import 'package:flutter_getx/src/pages/next.dart';
@@ -99,6 +100,13 @@ class MyPage extends StatelessWidget {
                 Get.to(ReactiveStateManagePage());
               },
               child: Text('반응형 상태 관리'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                // Navigator.of(context).pushNamed('/first');
+                Get.to(DependencyManagePage());
+              },
+              child: Text('의존성 관리'),
             ),
           ],
         ),
